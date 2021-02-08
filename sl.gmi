@@ -7,3 +7,19 @@
 A project I've been working on to write a compiler for a lisp based on scheme
 but with some improvements. These mostly have to do with how scheme handles
 definitions and block structure.
+
+* Definitions can only appear in begin expressions, and begin expressions introduce a new scope.
+* Definitions behave as in OCaml. (def <var> <val>) binds a value to a variable, however the variable appears nowhere in the values scope. (rec <var> <val>) does the same, but the variable comes into scope in any lambda expressions in the value.
+
+An example factorial program.
+
+```
+(begin
+ (rec (fac n)
+      (if (< n 1)
+          1
+          (* n (fac (- n 1)))))
+ (def x 10)
+ (fac x))
+```
+
