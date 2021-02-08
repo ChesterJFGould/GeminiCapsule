@@ -5,7 +5,9 @@
 ```
 
 > Whoami
-A first year undergrad interested in computer science and currently obsessed
-with language design and implementation. 
+A first year undergrad interested in computer science and currently obsessed with language design and implementation.
 
 => sl.gmi Simple Lisp
+
+=> https://github.com/Techser My Github
+=> mail://chestergould@protonmail.com My Email
