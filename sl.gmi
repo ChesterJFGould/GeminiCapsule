@@ -10,6 +10,7 @@ definitions and block structure.
 
 * Definitions can only appear in begin expressions, and begin expressions introduce a new scope.
 * Definitions behave as in OCaml. (def <var> <val>) binds a value to a variable, however the variable appears nowhere in the values scope. (rec <var> <val>) does the same, but the variable comes into scope in any lambda expressions in the value.
+* Definitions don't all come into scope at once like in scheme. Instead they behave more like in C, they come into scope sequentially. The immediately obvious problem with this is that mutual recursion becomes difficult. We fix this by introducing a new def/rec notation similar to scheme let notation, (rec ((<var> <val>)...)). These definitions will all behave as if they came into scope at once.
 
 An example factorial program.
 
@@ -21,6 +22,16 @@ An example factorial program.
           (* n (fac (- n 1)))))
  (def x 10)
  (fac x))
+```
+
+Mutually recursive even/odd predicates.
+
+```
+(begin
+ (rec (((even? n) (if (= n 0) true (odd? (- n 1))))
+       ((odd? n) (if (= n 0) false (even? (- n 1))))))
+ (even? 2) ; true
+ (odd? 10)) ; false
 ```
 
 The compiler I'm writing is based on the "Cheney on the MTA" algorithm as proposed by Henry Baker in his 1994 paper. It is written in scheme and each pass is a separate program that performs its transformation on stdin and prints to stdout.
