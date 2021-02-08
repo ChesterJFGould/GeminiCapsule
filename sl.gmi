@@ -23,3 +23,4 @@ An example factorial program.
  (fac x))
 ```
 
+The compiler I'm writing is based on the "Cheney on the MTA" algorithm as proposed by Henry Baker in his 1994 paper. It is written in scheme and each pass is a separate program that performs its transformation on stdin and prints to stdout.
