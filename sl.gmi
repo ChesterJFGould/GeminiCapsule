@@ -1,0 +1,9 @@
+```
+░█▀▀░▀█▀░█▄█░█▀█░█░░░█▀▀░░░█░░░▀█▀░█▀▀░█▀█
+░▀▀█░░█░░█░█░█▀▀░█░░░█▀▀░░░█░░░░█░░▀▀█░█▀▀
+░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░▀▀▀░▀░░
+```
+
+A project I've been working on to write a compiler for a lisp based on scheme
+but with some improvements. These mostly have to do with how scheme handles
+definitions and block structure.
