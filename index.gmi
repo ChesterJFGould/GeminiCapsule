@@ -4,7 +4,7 @@
 ░▀▀▀░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀░▀▀▀░░░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀▀
 ```
 
-> Whoami
+> whoami
 A first year undergrad interested in computer science and currently obsessed with language design and implementation.
 
 => sl.gmi Simple Lisp
