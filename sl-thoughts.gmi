@@ -23,7 +23,7 @@ Another example to illustrate the difficulty.
 ```
 (def loop 10)
 (rec loop (cons (lambda () ((car loop)))
-                10))
+                loop))
 ((car loop)) ; Loops-forever
 (cdr loop) ; Returns 10
 ```
