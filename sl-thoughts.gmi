@@ -16,3 +16,14 @@ What should the following be closure transformed into?
 
 If we do (rec fac (closure-transform (lambda ...) fac)) the defined semantic
 for rec need to be changed for the case of closures.
+
+The point of sl is to avoid the all the runtime concessions that need to be made while executing scheme code.
+
+Another example to illustrate the difficulty.
+```
+(def loop 10)
+(rec loop (cons (lambda () ((car loop)))
+                10))
+((car loop)) ; Loops-forever
+(cdr loop) ; Returns 10
+```
