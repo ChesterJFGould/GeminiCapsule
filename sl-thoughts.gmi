@@ -1,0 +1,18 @@
+```
+░█▀▀░█░░░░░▀█▀░█░█░█▀█░█░█░█▀▀░█░█░▀█▀░█▀▀
+░▀▀█░█░░░░░░█░░█▀█░█░█░█░█░█░█░█▀█░░█░░▀▀█
+░▀▀▀░▀▀▀░░░░▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░░▀░░▀▀▀
+```
+# Problems during compilation
+1. The core language may not translate well to lower compiler layers.
+2. Therefore the language needs to be transformed into a new representation.
+What will this be and when should it be translated?
+
+What should the following be closure transformed into?
+
+```
+(rec fac (lambda (n) (if (< n 1) 1 (* n (fac (- n 1))))))
+```
+
+If we do (rec fac (closure-transform (lambda ...) fac)) the defined semantic
+for rec need to be changed for the case of closures.
